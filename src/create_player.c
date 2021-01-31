@@ -13,7 +13,7 @@ sfSprite *create_player(game *ga)
 {
     sfTexture *texture;
     sfSprite *sprite;
-    char *filepath = "image/jotaro_s/jotaro.png";
+    char *filepath = "press/image/jotaro_s/jotaro.png";
     
     ga->jo_rect.left = 0;
     ga->jo_rect.top = 0;

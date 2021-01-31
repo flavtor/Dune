@@ -127,7 +127,6 @@ void move_maps(game *ga)
         ga->pos.x -= 5;
         sfSprite_setPosition(ga->spriteback, ga->pos);
         }
-    printf("x = %f || y = %f\n", ga->pos.x, ga->pos.y);
 }
 
 void move_player(game *ga)

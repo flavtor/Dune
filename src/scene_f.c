@@ -14,7 +14,7 @@ sfSprite *create_scene_1(void)
     sfTexture *textback;
     sfSprite *spriteback;
 
-    textback = sfTexture_createFromFile("image/scene_1.jpg", NULL);
+    textback = sfTexture_createFromFile("press/image/scene_1.jpg", NULL);
     if (!textback)
         return (NULL);
     spriteback = sfSprite_create();
@@ -24,9 +24,9 @@ sfSprite *create_scene_1(void)
 
 void init_scene_f(game *ga)
 {
-     ga->scene_1 = sfMusic_createFromFile("music/scene_1.ogg");
-     ga->meurtre = sfMusic_createFromFile("music/meurtre.ogg");
-     ga->lame = sfMusic_createFromFile("music/lame.ogg");
+     ga->scene_1 = sfMusic_createFromFile("other/music/scene_1.ogg");
+     ga->meurtre = sfMusic_createFromFile("other/music/meurtre.ogg");
+     ga->lame = sfMusic_createFromFile("other/music/lame.ogg");
      ga->spriteback = create_scene_1();
      sfMusic_play(ga->scene_1);
      sfMusic_play(ga->meurtre);

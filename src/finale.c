@@ -14,7 +14,7 @@ sfSprite *create_finale_1(void)
     sfTexture *textback;
     sfSprite *spriteback;
 
-    textback = sfTexture_createFromFile("image/map/finale.jpg", NULL);
+    textback = sfTexture_createFromFile("press/image/map/finale.jpg", NULL);
     if (!textback)
         return (NULL);
     spriteback = sfSprite_create();
@@ -26,7 +26,7 @@ sfSprite *create_player_2(game *ga)
 {
     sfTexture *texture;
     sfSprite *sprite;
-    char *filepath = "image/jotaro_s/jotaro.png";
+    char *filepath = "press/image/jotaro_s/jotaro.png";
 
     ga->jo_rect.left = 0;
     ga->jo_rect.top = 0;
@@ -44,8 +44,8 @@ sfSprite *create_player_2(game *ga)
 
 void init_finale(game *ga)
 {
-    ga->finale_1 = sfMusic_createFromFile("music/finale_1.ogg");
-    ga->di26 = create_dialog(ga, "image/dialogs/dialog26.png");
+    ga->finale_1 = sfMusic_createFromFile("other/music/finale_1.ogg");
+    ga->di26 = create_dialog(ga, "press/image/dialogs/dialog26.png");
     ga->spriteback = create_finale_1();
     ga->s_jotaro = create_player_2(ga);
     ga->c_ta = create_clock();
@@ -111,7 +111,6 @@ void finale(sfRenderWindow *window, game *ga)
         monster_damages(ga, ga->s_monster5);
         monster_damages(ga, ga->s_monster6);
         scene_2(window, ga, ga->finale_1);
-        printf("x = %f || y = %f\n", ga->pos1.x, ga->pos1.y);
         while (sfRenderWindow_pollEvent(window, &ev)) {
             if (ev.type == sfEvtClosed || sfKeyboard_isKeyPressed(sfKeySpace))
                 sfRenderWindow_close(window);

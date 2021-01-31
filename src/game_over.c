@@ -39,7 +39,7 @@ sfSprite *display_over(void)
     sfTexture *texture;
     sfSprite *g_over;
 
-    texture = sfTexture_createFromFile("image/over.png", NULL);
+    texture = sfTexture_createFromFile("press/image/over.png", NULL);
     if (!texture)
         return (NULL);
     g_over = sfSprite_create();
@@ -51,7 +51,7 @@ sfMusic *over_music(void)
 {
     sfMusic *music;
 
-    music = sfMusic_createFromFile("music/over.ogg");
+    music = sfMusic_createFromFile("other/music/over.ogg");
     if (!music)
         return (NULL);
     sfMusic_play(music);

@@ -14,7 +14,7 @@ sfSprite *create_scene_2(void)
     sfTexture *textback;
     sfSprite *spriteback;
 
-    textback = sfTexture_createFromFile("image/scene_2.jpg", NULL);
+    textback = sfTexture_createFromFile("press/image/scene_2.jpg", NULL);
     if (!textback)
         return (NULL);
     spriteback = sfSprite_create();
@@ -24,7 +24,7 @@ sfSprite *create_scene_2(void)
 
 void init_scene_r(game *ga)
 {
-    ga->scene_2 = sfMusic_createFromFile("music/scene_2.ogg");
+    ga->scene_2 = sfMusic_createFromFile("other/music/scene_2.ogg");
     ga->spriteback = create_scene_2();
     sfMusic_play(ga->scene_2);
 }

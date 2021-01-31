@@ -14,7 +14,7 @@ sfSprite *create_sprite_grotte(void)
     sfTexture *textback;
     sfSprite *spriteback;
 
-    textback = sfTexture_createFromFile("image/map/donjon.jpg", NULL);
+    textback = sfTexture_createFromFile("press/image/map/donjon.jpg", NULL);
     if (!textback)
         return (NULL);
     spriteback = sfSprite_create();
@@ -24,7 +24,7 @@ sfSprite *create_sprite_grotte(void)
 
 void init_grotte_1(game *ga)
 {
-    ga->music_grotte_1 = sfMusic_createFromFile("music/donjon.ogg");
+    ga->music_grotte_1 = sfMusic_createFromFile("other/music/donjon.ogg");
     ga->spriteback = create_sprite_grotte();
     ga->s_jotaro = create_player(ga);
     ga->c_ta = create_clock();
@@ -41,13 +41,13 @@ void init_grotte_1(game *ga)
     ga->s_monster6 = create_monster(1503, 396);
     ga->c_monster6 = create_clock();
     ga->xrect = 0;
-    ga->di23 = create_dialog(ga, "image/dialogs/dialog19.png");
+    ga->di23 = create_dialog(ga, "press/image/dialogs/dialog19.png");
     sfMusic_play(ga->music_grotte_1);
 }
 
 void init_grotte_2(game *ga)
 {
-    ga->music_grotte_2 = sfMusic_createFromFile("music/donjon.ogg");
+    ga->music_grotte_2 = sfMusic_createFromFile("other/music/donjon.ogg");
     ga->spriteback = create_sprite_grotte();
     ga->s_jotaro = create_player(ga);
     ga->c_ta = create_clock();
@@ -64,13 +64,13 @@ void init_grotte_2(game *ga)
     ga->s_monster6 = create_monster(1503, 396);
     ga->c_monster6 = create_clock();
     ga->xrect = 0;
-    ga->di24 = create_dialog(ga, "image/dialogs/dialog20.png");
+    ga->di24 = create_dialog(ga, "press/image/dialogs/dialog20.png");
     sfMusic_play(ga->music_grotte_2);
 }
 
 void init_grotte_3(game *ga)
 {
-    ga->music_grotte_3 = sfMusic_createFromFile("music/donjon.ogg");
+    ga->music_grotte_3 = sfMusic_createFromFile("other/music/donjon.ogg");
     ga->spriteback = create_sprite_grotte();
     ga->s_jotaro = create_player(ga);
     ga->c_ta = create_clock();
@@ -87,7 +87,7 @@ void init_grotte_3(game *ga)
     ga->s_monster6 = create_monster(1503, 396);
     ga->c_monster6 = create_clock();
     ga->xrect = 0;
-    ga->di25 = create_dialog(ga, "image/dialogs/dialog23.png");
+    ga->di25 = create_dialog(ga, "press/image/dialogs/dialog23.png");
     sfMusic_play(ga->music_grotte_3);
 } 
 

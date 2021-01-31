@@ -78,7 +78,7 @@ sfMusic *menu_music(void)
 {
     sfMusic *music;
 
-    music = sfMusic_createFromFile("music/menu.ogg");
+    music = sfMusic_createFromFile("other/music/menu.ogg");
     if (!music)
         return (NULL);
     sfMusic_play(music);
@@ -91,7 +91,7 @@ sfSprite *quit_button(void)
     sfSprite* quit;
     sfIntRect rect = {0, 0, 670, 185};
 
-    quit_texture = sfTexture_createFromFile("image/sprites/exit.png", NULL);
+    quit_texture = sfTexture_createFromFile("press/image/sprites/exit.png", NULL);
     if (!quit_texture)
         return (NULL);
     quit = sfSprite_create();
@@ -106,7 +106,7 @@ sfSprite *play_button(void)
     sfSprite* play;
     sfIntRect rect = {0, 0, 670, 185};
 
-    play_texture = sfTexture_createFromFile("image/sprites/play.png", NULL);
+    play_texture = sfTexture_createFromFile("press/image/sprites/play.png", NULL);
     if (!play_texture)
         return (NULL);
     play = sfSprite_create();
@@ -120,7 +120,7 @@ sfSprite *menu_background(void)
     sfTexture* texture;
     sfSprite* menu_background;
 
-    texture = sfTexture_createFromFile("image/background/menu_back.jpg", NULL);
+    texture = sfTexture_createFromFile("press/image/background/menu_back.jpg", NULL);
     if (!texture)
         return (NULL);
     menu_background = sfSprite_create();

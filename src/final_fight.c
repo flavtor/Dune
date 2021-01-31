@@ -61,7 +61,7 @@ sfSprite *create_hero(game *ga)
 {
     sfTexture *texture;
     sfSprite *sprite;
-    char *filepath = "image/jotaro_s/hero.png";
+    char *filepath = "press/image/jotaro_s/hero.png";
 
     ga->jo_rect.left = 0;
     ga->jo_rect.top = 0;
@@ -82,7 +82,7 @@ sfSprite *create_final_2(void)
     sfTexture *textback;
     sfSprite *spriteback;
 
-    textback = sfTexture_createFromFile("image/fight.jpg", NULL);
+    textback = sfTexture_createFromFile("press/image/fight.jpg", NULL);
     if (!textback)
         return (NULL);
     spriteback = sfSprite_create();
@@ -92,7 +92,7 @@ sfSprite *create_final_2(void)
 
 void init_final_fight(game *ga)
 {
-    ga->finale_2 = sfMusic_createFromFile("music/finale_2.ogg");
+    ga->finale_2 = sfMusic_createFromFile("other/music/finale_2.ogg");
     ga->spriteback = create_final_2();
     ga->s_jotaro = create_player(ga);
     ga->s_hero = create_hero(ga);

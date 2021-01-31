@@ -25,7 +25,7 @@ sfSprite *life(sfSprite *life, game *ga)
     ga->rect_l.top = 0;
     ga->rect_l.width = 547;
     ga->rect_l.height = 84;
-    texture = sfTexture_createFromFile("image/life.png", NULL);
+    texture = sfTexture_createFromFile("press/image/life.png", NULL);
     if (!texture)
         return (NULL);
     life = sfSprite_create();
@@ -39,7 +39,7 @@ sfSprite *hub_background(void)
     sfTexture* texture;
     sfSprite* menu_background;
 
-    texture = sfTexture_createFromFile("image/map/Image.jpg", NULL);
+    texture = sfTexture_createFromFile("press/image/map/Image.jpg", NULL);
     if (!texture)
         return (NULL);
     menu_background = sfSprite_create();
@@ -51,7 +51,7 @@ sfMusic *hub_music(void)
 {
     sfMusic *music;
 
-    music = sfMusic_createFromFile("music/map.ogg");
+    music = sfMusic_createFromFile("other/music/map.ogg");
     if (!music)
         return (NULL);
     sfMusic_play(music);
@@ -70,28 +70,28 @@ void hub_init(game *ga)
 
 void init_dialogs(sfRenderWindow *w, game *ga)
 {
-    ga->di1 = create_dialog(ga, "image/dialogs/dialog1.png");
-    ga->di2 = create_dialog(ga, "image/dialogs/dialog2.png");
-    ga->di3 = create_dialog(ga, "image/dialogs/dialog7.png");
-    ga->di4 = create_dialog(ga, "image/dialogs/dialog3.png");
-    ga->di5 = create_dialog(ga, "image/dialogs/dialog5.png");
-    ga->di6 = create_dialog(ga, "image/dialogs/dialog6.png");
-    ga->di7 = create_dialog(ga, "image/dialogs/dialog21.png");
-    ga->di8 = create_dialog(ga, "image/dialogs/dialog8.png");
-    ga->di9 = create_dialog(ga, "image/dialogs/dialog9.png");
-    ga->di10 = create_dialog(ga, "image/dialogs/dialog10.png");
-    ga->di11 = create_dialog(ga, "image/dialogs/dialog11.png");
-    ga->di12 = create_dialog(ga, "image/dialogs/dialog12.png");
-    ga->di13 = create_dialog(ga, "image/dialogs/dialog13.png");
-    ga->di14 = create_dialog(ga, "image/dialogs/dialog14.png");
-    ga->di15 = create_dialog(ga, "image/dialogs/dialog15.png");
-    ga->di16 = create_dialog(ga, "image/dialogs/dialog16.png");
-    ga->di17 = create_dialog(ga, "image/dialogs/dialog17.png");
-    ga->di18 = create_dialog(ga, "image/dialogs/dialog18.png");
-    ga->di19 = create_dialog(ga, "image/dialogs/dialog18.png");
-    ga->di20 = create_dialog(ga, "image/dialogs/dialog18.png");
-    ga->di21 = create_dialog(ga, "image/dialogs/dialog4.png");
-    ga->di22 = create_dialog(ga, "image/dialogs/dialog22.png");
+    ga->di1 = create_dialog(ga, "press/image/dialogs/dialog1.png");
+    ga->di2 = create_dialog(ga, "press/image/dialogs/dialog2.png");
+    ga->di3 = create_dialog(ga, "press/image/dialogs/dialog7.png");
+    ga->di4 = create_dialog(ga, "press/image/dialogs/dialog3.png");
+    ga->di5 = create_dialog(ga, "press/image/dialogs/dialog5.png");
+    ga->di6 = create_dialog(ga, "press/image/dialogs/dialog6.png");
+    ga->di7 = create_dialog(ga, "press/image/dialogs/dialog21.png");
+    ga->di8 = create_dialog(ga, "press/image/dialogs/dialog8.png");
+    ga->di9 = create_dialog(ga, "press/image/dialogs/dialog9.png");
+    ga->di10 = create_dialog(ga, "press/image/dialogs/dialog10.png");
+    ga->di11 = create_dialog(ga, "press/image/dialogs/dialog11.png");
+    ga->di12 = create_dialog(ga, "press/image/dialogs/dialog12.png");
+    ga->di13 = create_dialog(ga, "press/image/dialogs/dialog13.png");
+    ga->di14 = create_dialog(ga, "press/image/dialogs/dialog14.png");
+    ga->di15 = create_dialog(ga, "press/image/dialogs/dialog15.png");
+    ga->di16 = create_dialog(ga, "press/image/dialogs/dialog16.png");
+    ga->di17 = create_dialog(ga, "press/image/dialogs/dialog17.png");
+    ga->di18 = create_dialog(ga, "press/image/dialogs/dialog18.png");
+    ga->di19 = create_dialog(ga, "press/image/dialogs/dialog18.png");
+    ga->di20 = create_dialog(ga, "press/image/dialogs/dialog18.png");
+    ga->di21 = create_dialog(ga, "press/image/dialogs/dialog4.png");
+    ga->di22 = create_dialog(ga, "press/image/dialogs/dialog22.png");
 }
 
 void dialogs(sfRenderWindow *w, game *ga)

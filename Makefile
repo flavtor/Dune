@@ -5,7 +5,7 @@
 ## makefile
 ##
 
-NAME	=	game_jam
+NAME	=	Dune
 
 CC	=	gcc
 
@@ -25,24 +25,24 @@ SPRITES	=	./src/sprites/
 
 WINDOW	=	./src/window/
 
-SRC	=	main.c			\
-		destroy.c 		\
-		display_window.c	\
-		launch_menu.c		\
-		hub.c			\
-		create_player.c		\
-		move.c			\
-		create_dialog.c		\
-		grotte.c		\
-		game_over.c		\
-		scene_f.c		\
-		finale.c		\
-		move_monsters.c		\
-		create_monster.c	\
-		move_sprite.c		\
-		verif_max_size.c	\
-		scene_r.c		\
-		final_fight.c
+SRC	=	src/main.c				\
+		src/destroy.c 			\
+		src/display_window.c		\
+		src/launch_menu.c		\
+		src/hub.c			\
+		src/create_player.c		\
+		src/move.c			\
+		src/create_dialog.c		\
+		src/grotte.c			\
+		src/game_over.c			\
+		src/scene_f.c			\
+		src/finale.c			\
+		src/move_monsters.c		\
+		src/create_monster.c		\
+		src/move_sprite.c		\
+		src/verif_max_size.c		\
+		src/scene_r.c			\
+		src/final_fight.c
 
 OBJ	=	$(SRC:.c=.o)
 
