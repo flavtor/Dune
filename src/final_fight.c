@@ -127,9 +127,35 @@ int jotaro_damages(game *ga, sfSprite *sp)
     return (0);
 }
 
+int target(sfRenderWindow *win, sfSprite *s, int x)
+{
+    if (sfMouse_isButtonPressed(sfMouseLeft)) {
+        if (sfMouse_getPositionRenderWindow(win).x >
+            sfSprite_getPosition(s).x
+            && sfMouse_getPositionRenderWindow(win).x <
+            sfSprite_getPosition(s).x
+            +80 && sfMouse_getPositionRenderWindow(win).y >
+            sfSprite_getPosition(s).y &&
+            sfMouse_getPositionRenderWindow(win).y <
+            sfSprite_getPosition(s).y + 80) {
+            x += 1;
+        }
+    }
+    return (x);
+}
+
+static void exit_(sfRenderWindow *w, game *ga, sfMusic *m, int x)
+{
+    if (x >= 100) {
+        sfMusic_stop(m);
+        win(w, ga);
+    }
+}
+    
 void final_fight(sfRenderWindow *window, game *ga)
 {
     sfEvent ev;
+    int x = 0;
 
     init_final_fight(ga);
     while (sfRenderWindow_isOpen(window)) {
@@ -141,7 +167,9 @@ void final_fight(sfRenderWindow *window, game *ga)
         move_hero(ga);
         life_gestion(window, ga, ga->finale_2);
         jotaro_damages(ga, ga->s_jotaro);
-        // exit_(window, ga, ga->final_2);
+        x = target(window, ga->s_jotaro, x);
+        printf("x = %d\n", x);
+        exit_(window, ga, ga->finale_2, x);
         while (sfRenderWindow_pollEvent(window, &ev)) {
             if (ev.type == sfEvtClosed || sfKeyboard_isKeyPressed(sfKeySpace))
                 sfRenderWindow_close(window);

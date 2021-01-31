@@ -88,6 +88,7 @@ void grotte_3(sfRenderWindow *window, game *ga);
 void move_jotaro_left_right(game *ga);
 void move_jotaro_up_down(game *ga);
 int obstacle_grotte(game *ga, sfVector2f a, sfVector2f b);
+void win(sfRenderWindow *win, game *ga);
 
 //GAME_OVER
 

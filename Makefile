@@ -42,7 +42,8 @@ SRC	=	src/main.c				\
 		src/move_sprite.c		\
 		src/verif_max_size.c		\
 		src/scene_r.c			\
-		src/final_fight.c
+		src/final_fight.c		\
+		src/winner.c
 
 OBJ	=	$(SRC:.c=.o)
 
