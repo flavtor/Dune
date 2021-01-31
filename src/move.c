@@ -62,7 +62,7 @@ int obstacle(game *ga)
     if (obstacle_gestion(ga, a, b) == 1 && obstacle_gestion(ga, c, d) == 1 && obstacle_gestion(ga, e, f) == 1
         && (obstacle_gestion(ga, g, h) == 1) && (obstacle_gestion(ga, i, j) == 1) && (obstacle_gestion(ga, k, l) == 1)
         && (obstacle_gestion(ga, m, n) == 1) && (obstacle_gestion(ga, o, p) == 1) && (obstacle_gestion(ga, q, r) == 1)
-        && (obstacle_gestion(ga, s, t) == 1) && (obstacle_gestion(ga, u, v) == 1), (obstacle_gestion(ga, w, x) == 1)
+        && (obstacle_gestion(ga, s, t) == 1) && (obstacle_gestion(ga, u, v) == 1) && (obstacle_gestion(ga, w, x) == 1)
         && (obstacle_gestion(ga, z, a1) == 1))
         return (1);
     return (0);

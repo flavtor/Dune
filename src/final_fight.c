@@ -111,6 +111,22 @@ void move_hero(game *ga)
     }
 }
 
+int jotaro_damages(game *ga, sfSprite *sp)
+{
+    sfVector2f jo_b = {ga->pos1.x + 35, ga->pos1.y + 35};
+    sfVector2f c = sfSprite_getPosition(sp);
+    sfVector2f d = {c.x + 75, c.y + 80};
+
+    c.x += 20;
+    c.y += 20;
+    if (((((ga->pos1.x <= c.x && c.x <= jo_b.x &&
+            ga->pos1.y <= c.y && c.y <= jo_b.y))))
+        || (ga->pos1.x <= d.x && d.x <= jo_b.x
+            && ga->pos1.y <= d.y && d.y <= jo_b.y))
+        ga->vie -= 0.25;
+    return (0);
+}
+
 void final_fight(sfRenderWindow *window, game *ga)
 {
     sfEvent ev;
@@ -118,11 +134,13 @@ void final_fight(sfRenderWindow *window, game *ga)
     init_final_fight(ga);
     while (sfRenderWindow_isOpen(window)) {
         display_window(window, ga, ga->finale_2);
+        sfRenderWindow_drawSprite(window, ga->life, NULL);
         sfRenderWindow_drawSprite(window, ga->s_jotaro, NULL);
         sfRenderWindow_drawSprite(window, ga->s_hero, NULL);
         move_jotaro_zomb(ga, 5, 15);
         move_hero(ga);
-        //move_player(ga);
+        life_gestion(window, ga, ga->finale_2);
+        jotaro_damages(ga, ga->s_jotaro);
         // exit_(window, ga, ga->final_2);
         while (sfRenderWindow_pollEvent(window, &ev)) {
             if (ev.type == sfEvtClosed || sfKeyboard_isKeyPressed(sfKeySpace))

@@ -20,6 +20,7 @@ int monster_damages(game *ga, sfSprite *sp)
         || (ga->pos1.x <= d.x && d.x <= jo_b.x
             && ga->pos1.y <= d.y && d.y <= jo_b.y))
         ga->vie -= 0.25;
+    return (0);
 }
 
 void move_all_monster(game *ga)
